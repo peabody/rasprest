@@ -22,14 +22,14 @@ def auth(f):
 @app.route('/reboot')
 @auth
 def reboot():
-    run(['sudo', 'reboot'])
-    return 'Rebooted.'
+    run(['sudo', 'shutdown', '-r'])
+    return 'Rebooting...'
 
 @app.route('/shutdown')
 @auth
 def shutdown():
-    run(['sudo', 'shutdown', '-h', 'now'])
-    return 'Shutdown.'
+    run(['sudo', 'shutdown'])
+    return 'Shutting down...'
 
 if __name__ == '__main__':
     app.run()

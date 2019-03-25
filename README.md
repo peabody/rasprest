@@ -9,7 +9,7 @@ git clone git@github.com:peabody/rasprest.git
 ## Setup your virtual environment
 
 ```bash
-virtualenv venv
+virtualenv -p python3.5 venv
 ```
 
 ## Install requirements
