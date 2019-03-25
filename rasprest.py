@@ -4,7 +4,7 @@ import os
 from flask import Flask, request
 
 app = Flask(__name__)
-passwd = open(os.path.expanduser('~/.passwd.txt')).readlines()[0]
+passwd = open(os.path.expanduser('~/.passwd.txt')).readlines()[0].strip()
 
 def check_password(password):
     return passwd == password
