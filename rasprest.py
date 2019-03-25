@@ -10,14 +10,14 @@ passwd = open(os.path.expanduser('~/.passwd.txt')).readlines()[0].strip()
 
 class Command:
     '''
-    Given a command argument list, run command after milliseconds delay.
+    Given a command argument list, run command after seconds delay.
     '''
-    def __init__(self, command_list, milliseconds=10000):
+    def __init__(self, command_list, seconds=10):
         self.command_list = command_list
-        self.milliseconds = milliseconds
+        self.seconds = seconds
 
     def __call__(self):
-        time.sleep(self.milliseconds)
+        time.sleep(self.seconds)
         run(self.command_list)
 
 
